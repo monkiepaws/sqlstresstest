@@ -14,7 +14,7 @@ let i = 30;
 
 setInterval(function() {
     sendBeacon(++i, i, 'sfv', 'pc', i + 15)
-        .then(result => console.log(result))
+        .then(result => console.log(result.rowsAffected))
         .catch(error => console.error(error));
 }, 50);
 
